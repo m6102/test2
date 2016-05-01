@@ -28,7 +28,7 @@ def main():
 
         if committed:
             # Now, how many amazing commits did I make on that day? Hmmm ...
-            num_of_commits = random.randint(0, 6)
+            num_of_commits = random.randint(0, 1)
 
             for commit in range(num_of_commits):
 
