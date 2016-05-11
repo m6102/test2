@@ -16,9 +16,9 @@ def main():
     Then make git commits for each random date-time string.
     """
 
-    start_date = date(2016, 5, 13)
+    start_date = date(2016, 5, 11)
     #today = datetime.now().date()
-    today = date(2016, 5, 13)
+    today = date(2016, 5, 11)
 
     delta = today - start_date
 
@@ -56,7 +56,7 @@ def _make_commit_for_time(commit_time):
         fh.write(commit_time)
 
     # commit it
-    call('git add .'.split())
+    call('git add max.c'.split())
     #call(['git', 'commit', '-am', '"%s"' % commit_time, '--date="%s"' % commit_time])
     call(['git', 'commit', '-am', '"Added some code"', '--date="%s"' % commit_time])
     # Beat their sooper anti-cheat algo If you make a bunch of historic commits
