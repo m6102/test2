@@ -16,8 +16,9 @@ def main():
     Then make git commits for each random date-time string.
     """
 
-    start_date = date(2016, 4, 29)
-    today = datetime.now().date()
+    start_date = date(2016, 5, 12)
+    #today = datetime.now().date()
+    today = date(2016, 5, 12)
 
     delta = today - start_date
 
@@ -28,7 +29,7 @@ def main():
 
         if committed:
             # Now, how many amazing commits did I make on that day? Hmmm ...
-            num_of_commits = random.randint(0, 1)
+            num_of_commits = random.randint(0, 2)
 
             for commit in range(num_of_commits):
 
