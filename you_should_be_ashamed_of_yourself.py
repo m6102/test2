@@ -16,9 +16,9 @@ def main():
     Then make git commits for each random date-time string.
     """
 
-    start_date = date(2016, 5, 12)
+    start_date = date(2016, 5, 13)
     #today = datetime.now().date()
-    today = date(2016, 5, 12)
+    today = date(2016, 5, 13)
 
     delta = today - start_date
 
@@ -29,7 +29,7 @@ def main():
 
         if committed:
             # Now, how many amazing commits did I make on that day? Hmmm ...
-            num_of_commits = random.randint(0, 2)
+            num_of_commits = random.randint(0, 1)
 
             for commit in range(num_of_commits):
 
@@ -57,8 +57,8 @@ def _make_commit_for_time(commit_time):
 
     # commit it
     call('git add .'.split())
-    call(['git', 'commit', '-am', '"%s"' % commit_time, '--date="%s"' % commit_time])
-
+    #call(['git', 'commit', '-am', '"%s"' % commit_time, '--date="%s"' % commit_time])
+    call(['git', 'commit', '-am', '"Added some code"', '--date="%s"' % commit_time])
     # Beat their sooper anti-cheat algo If you make a bunch of historic commits
     # and push them all at once, github won't change your heat map. So, just
     # push after each commit.
